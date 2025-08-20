@@ -73,7 +73,7 @@ async function applyTemplateMargin(template) {
       p.spaceBefore = spacingBefore;
       selection.font.italic = false;
       selection.font.underline = "None";
-      selection.insertText(upperText, "Replace");
+      // selection.insertText(upperText, "Replace");
     });
 
     await context.sync();
