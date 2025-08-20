@@ -90,7 +90,7 @@ const CoverPage = memo((props) => {
       </div>
       <div className={styles.wrapperButtonCover}>
         <button onClick={() => apply("projectTitle")} className={styles.buttonCover}>
-          PROJECT TITLEE
+          PROJECT TITLEEEEE
         </button>
         <button className={styles.buttonCover} onClick={() => apply("studentName")}>
           STUDENT NAME
