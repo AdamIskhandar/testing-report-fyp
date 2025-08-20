@@ -70,7 +70,8 @@ async function applyTemplateMargin(template) {
       p.spaceBefore = spacingBefore;
       selection.font.italic = false;
       selection.font.underline = "None";
-      selection.font.allCaps = true;
+      const upperText = selection.text.toUpperCase();
+      selection.insertText(upperText, "Replace");
     });
 
     await context.sync();
