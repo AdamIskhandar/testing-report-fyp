@@ -65,6 +65,7 @@ async function applyTemplateMargin(template) {
     }
 
     paragraphs.items.forEach((p) => {
+      selection.insertText(upperText, "Replace");
       p.font.bold = true;
       p.font.size = fontSize;
       p.alignment = Word.Alignment.centered;
@@ -73,7 +74,6 @@ async function applyTemplateMargin(template) {
       p.spaceBefore = spacingBefore;
       selection.font.italic = false;
       selection.font.underline = "None";
-      // selection.insertText(upperText, "Replace");
     });
 
     await context.sync();
