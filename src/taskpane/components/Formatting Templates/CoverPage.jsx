@@ -51,7 +51,7 @@ async function applyTemplateMargin(template) {
       rightIndent = 18;
       fontSize = 20;
       spacingBefore = 30;
-      spacingAfter = 200;
+      spacingAfter = 230;
     } else if (template === "studentName") {
       leftIndent = 72; // ~1 inch (72 points)
       rightIndent = 72;
