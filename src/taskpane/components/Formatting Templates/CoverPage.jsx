@@ -70,6 +70,7 @@ async function applyTemplateMargin(template) {
       p.spaceBefore = spacingBefore;
       selection.font.italic = false;
       selection.font.underline = "None";
+      selection.font.allCaps = true;
     });
 
     await context.sync();
@@ -89,7 +90,7 @@ const CoverPage = memo((props) => {
       </div>
       <div className={styles.wrapperButtonCover}>
         <button onClick={() => apply("projectTitle")} className={styles.buttonCover}>
-          PROJECT TITLE
+          PROJECT TITLEE
         </button>
         <button className={styles.buttonCover} onClick={() => apply("studentName")}>
           STUDENT NAME
