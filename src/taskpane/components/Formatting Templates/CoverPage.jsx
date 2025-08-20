@@ -42,8 +42,6 @@ async function applyTemplateMargin(template) {
     let spacingAfter = 0;
     let spacingBefore = 0;
 
-    const upperText = selection.text.toUpperCase();
-
     // Template margin style
     if (template === "projectTitle") {
       leftIndent = 18; // ~0.25 inch (18 points)
@@ -72,7 +70,7 @@ async function applyTemplateMargin(template) {
       p.spaceBefore = spacingBefore;
       selection.font.italic = false;
       selection.font.underline = "None";
-      selection.insertText(upperText, "Replace");
+      selection.insertText(selection.text.toUpperCase(), "Replace");
     });
 
     await context.sync();
