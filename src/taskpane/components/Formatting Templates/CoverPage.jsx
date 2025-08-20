@@ -33,7 +33,7 @@ async function applyTemplateMargin(template) {
   await Word.run(async (context) => {
     const selection = context.document.getSelection();
     const paragraphs = selection.paragraphs;
-    selection.load("text");
+    // selection.load("text");
     paragraphs.load("items");
     await context.sync();
 
@@ -43,7 +43,7 @@ async function applyTemplateMargin(template) {
     let spacingAfter = 0;
     let spacingBefore = 0;
 
-    const upperText = selection.text.toUpperCase();
+    // const upperText = selection.text.toUpperCase();
 
     // Template margin style
     if (template === "projectTitle") {
