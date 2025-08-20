@@ -33,7 +33,7 @@ async function applyTemplateMargin(template) {
   await Word.run(async (context) => {
     const selection = context.document.getSelection();
     const paragraphs = selection.paragraphs;
-    // selection.load("text");
+    selection.load("text");
     paragraphs.load("items");
     await context.sync();
 
@@ -43,7 +43,7 @@ async function applyTemplateMargin(template) {
     let spacingAfter = 0;
     let spacingBefore = 0;
 
-    // const upperText = selection.text.toUpperCase();
+    const upperText = selection.text.toUpperCase();
 
     // Template margin style
     if (template === "projectTitle") {
@@ -51,12 +51,12 @@ async function applyTemplateMargin(template) {
       rightIndent = 18;
       fontSize = 20;
       spacingBefore = 30;
-      spacingAfter = 250;
+      spacingAfter = 200;
     } else if (template === "studentName") {
       leftIndent = 72; // ~1 inch (72 points)
       rightIndent = 72;
       fontSize = 20;
-      spacingAfter = 280;
+      spacingAfter = 200;
     } else if (template === "UPTM") {
       leftIndent = 144; // ~2 inch
       rightIndent = 144;
@@ -65,7 +65,7 @@ async function applyTemplateMargin(template) {
     }
 
     paragraphs.items.forEach((p) => {
-      // selection.insertText(upperText, "Replace");
+      selection.insertText(upperText, "Replace");
       selection.font.italic = false;
       selection.font.underline = "None";
       p.font.bold = true;
