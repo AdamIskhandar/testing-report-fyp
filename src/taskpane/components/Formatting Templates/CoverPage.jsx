@@ -56,7 +56,7 @@ async function applyTemplateMargin(template) {
       leftIndent = 72; // ~1 inch (72 points)
       rightIndent = 72;
       fontSize = 20;
-      spacingAfter = 200;
+      spacingAfter = 280;
     } else if (template === "UPTM") {
       leftIndent = 144; // ~2 inch
       rightIndent = 144;
