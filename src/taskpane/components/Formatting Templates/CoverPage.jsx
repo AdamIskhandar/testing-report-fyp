@@ -65,15 +65,15 @@ async function applyTemplateMargin(template) {
     }
 
     paragraphs.items.forEach((p) => {
-      selection.insertText(upperText, "Replace");
+      // selection.insertText(upperText, "Replace");
+      selection.font.italic = false;
+      selection.font.underline = "None";
       p.font.bold = true;
       p.font.size = fontSize;
       p.alignment = Word.Alignment.centered;
       p.font.name = "Arial";
       p.spaceAfter = spacingAfter;
       p.spaceBefore = spacingBefore;
-      selection.font.italic = false;
-      selection.font.underline = "None";
     });
 
     await context.sync();
